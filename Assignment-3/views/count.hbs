@@ -1,0 +1,14 @@
+<h1>Number of Games in Each Store</h1>
+
+<table>
+  <tr>
+    <th>No. of Games</th>
+    <th>Store Name</th>
+  </tr>
+  {{#each result}}
+    <tr>
+      <td>{{this.countGames}}</td>
+      <td>{{this.name}}</td>
+    </tr>
+  {{/each}}
+</table>

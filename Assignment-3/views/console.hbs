@@ -1,0 +1,18 @@
+<h1>{{chosenConsole}}</h1>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Release Year</th>
+    <th>Genre</th>
+    <th>Description</th>
+  </tr>
+  {{#each result}}
+    <tr>
+      <td>{{this.title}}</td>
+      <td>{{this.release_year}}</td>
+      <td>{{this.genre}}</td>
+      <td>{{this.description}}</td>
+    </tr>
+  {{/each}}
+</table>

@@ -1,9 +1,44 @@
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-  background-color: cadetblue;
+  background-color: #ffc300;
+  color: #581845;
 }
 
-a {
-  color: #00b7ff;
+input:hover {
+  background-color: #daf7a6;
+  border: 3px solid #ff5733;
+  border-radius: 5px;
+  color: #581845;
+  font-weight: bold;
+}
+
+input {
+  background-color: #c70039;
+  border: 3px solid #ff5733;
+  border-radius: 5px;
+  color: #ffc300;
+  font-weight: bold;
+}
+
+table {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  color: white;
+  background-color: #ff5733;
+}
+
+tr:nth-child(odd) {
+  background-color: #900c3f;
+}
+
+tr:nth-child(even) {
+  background-color: #c70039;
+}
+th {
+  text-align: left;
+  background-color: #581845;
+}
+
+td {
+  padding: 5px;
 }

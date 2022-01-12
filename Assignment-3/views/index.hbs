@@ -1,29 +1,67 @@
 <h1>GamesDB</h1>
 <h2>Queries below:</h2>
-<label>All games in specific store: </label>
-<select name="stores" id="stores">
-  <option value="gameStop">GameStop</option>
-  <option value="elgiganten">Elgiganten</option>
-  <option value="mediaMarkt">MediaMarkt</option>
-  <option value="bestBuy">BestBuy</option>
-</select>
-<input type="submit" value="Search" />
+<form action="/store">
+  <label>All games in specific store: </label>
+  <select name="stores" id="stores">
+    <option value="Gamestop">GameStop</option>
+    <option value="Elgiganten">Elgiganten</option>
+    <option value="Mediamarkt">MediaMarkt</option>
+    <option value="Bestbuy">BestBuy</option>
+    <option value="Webhallen">Webhallen</option>
+  </select>
+  <input type="submit" value="Search" />
+</form>
 <br />
+
+<form action="/console">
+  <label>All games for a specific console: </label>
+  <select name="consoles" id="consoles">
+    <option value="PC">PC</option>
+    <option value="Xbox One">Xbox One</option>
+    <option value="PS4">PS4</option>
+    <option value="Xbox Series X">Xbox Series X</option>
+    <option value="PS5">PS5</option>
+  </select>
+  <input type="submit" value="Search" />
+</form>
 <br />
-<label>All games for a specific console: </label>
-<select name="consoles" id="consoles">
-  <option value="pc">PC</option>
-  <option value="xboxOne">Xbox One</option>
-  <option value="ps4">PS4</option>
-  <option value="xboxSeriesX">Xbox Series X</option>
-  <option value="ps5">PS5</option>
-</select>
-<input type="submit" value="Search" />
-<p>All games in a specific genre</p>
-<p>All games in the city of a user</p>
-<p>Average number of games available in each store</p>
-{{#each result}}
-  <div>
-    <p>name: {{this.name}}</p>
-  </div>
-{{/each}}
+
+<form action="/genre">
+  <label>All games in a specific genre: </label>
+  <select name="genres" id="genres">
+    <option value="Action">Action</option>
+    <option value="Party">Party</option>
+    <option value="Battle royale">Battle Royale</option>
+    <option value="FPS">FPS</option>
+    <option value="Survival">Survival</option>
+    <option value="MOBA">MOBA</option>
+    <option value="Racing">Racing</option>
+    <option value="Horror">Horror</option>
+  </select>
+  <input type="submit" value="Search" />
+</form>
+<br />
+
+<form action="/users">
+  <label>All games in the city of a user: </label>
+  <select name="users" id="users">
+    <option value="Omer">Omer</option>
+    <option value="Tim">Tim</option>
+    <option value="Chris">Chris</option>
+    <option value="Keanu">Keanu</option>
+    <option value="Paul">Paul</option>
+  </select>
+  <input type="submit" value="Search" />
+</form>
+<br />
+
+<form action="/count">
+  <label>Count number of games and group by stores: </label>
+  <input type="submit" value="Search" />
+</form>
+<br />
+
+<form action="/view">
+  <label> View for all games released after 2017: </label>
+  <input type="submit" value="Search" />
+</form>
