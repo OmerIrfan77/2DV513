@@ -1,2 +1,29 @@
-<h1>{{title}}</h1>
-<p>Welcome to {{title}}</p>
+<h1>GamesDB</h1>
+<h2>Queries below:</h2>
+<label>All games in specific store: </label>
+<select name="stores" id="stores">
+  <option value="gameStop">GameStop</option>
+  <option value="elgiganten">Elgiganten</option>
+  <option value="mediaMarkt">MediaMarkt</option>
+  <option value="bestBuy">BestBuy</option>
+</select>
+<input type="submit" value="Search" />
+<br />
+<br />
+<label>All games for a specific console: </label>
+<select name="consoles" id="consoles">
+  <option value="pc">PC</option>
+  <option value="xboxOne">Xbox One</option>
+  <option value="ps4">PS4</option>
+  <option value="xboxSeriesX">Xbox Series X</option>
+  <option value="ps5">PS5</option>
+</select>
+<input type="submit" value="Search" />
+<p>All games in a specific genre</p>
+<p>All games in the city of a user</p>
+<p>Average number of games available in each store</p>
+{{#each result}}
+  <div>
+    <p>name: {{this.name}}</p>
+  </div>
+{{/each}}
