@@ -15,11 +15,8 @@ con.connect(function (err) {
   console.log("Connected to gamesDB!");
 });
 
-con.query("SELECT * FROM user", function (err, result, fields) {
-  if (err) throw err;
-  router.get("/", function (req, res, next) {
-    res.render("index", { result });
-  });
+router.get("/", function (req, res, next) {
+  res.render("index");
 });
 
 router.get("/store", function (req, res) {
